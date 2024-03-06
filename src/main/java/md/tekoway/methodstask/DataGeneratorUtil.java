@@ -28,4 +28,15 @@ public class DataGeneratorUtil {
         String uniqueUUID = UUID.randomUUID().toString();
         return uniqueUUID + "@" + domainName;
     }
+
+    static String getRandomEmail(String domainName, int maxLength) {
+        String acceptedChars = "ABCDEFabcdef012345";
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i = 0; i <= maxLength; i++) {
+            int randomIndex = DataGeneratorUtil.getRandomInt(acceptedChars.length());
+            stringBuilder.append(acceptedChars.charAt(randomIndex));
+            System.out.println("As part of iteration [" + i + "] and the letter [" + acceptedChars.charAt(randomIndex) + "] was added");
+        }
+        return stringBuilder.toString() + "@" + domainName;
+    }
 }
