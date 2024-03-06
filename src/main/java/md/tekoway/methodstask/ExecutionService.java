@@ -29,6 +29,8 @@ public class ExecutionService {
         System.out.println("The age of Batman is: " + customer1.getAge());
         System.out.println("The new name of Batman is: " + customer1.getName());
 
+        System.out.println(DataGeneratorUtil.getRandomEmail("mailinator.com", 5));
+
 
     }
 }
